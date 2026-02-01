@@ -1,12 +1,12 @@
 # Node
-/node_modules/
-dist/
-npm-debug.log*
+node_modules
+dist
+npm-debug.log
 yarn.lock
 package-lock.json
 
 # Composer
-/vendor/
+vendor
 
 # Environment
 .env
