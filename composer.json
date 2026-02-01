@@ -1,0 +1,14 @@
+{
+    "name": "anin/avsfw",
+    "description": "Another Variation Swatches for WooCommerce",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "autoload": {
+        "psr-4": {
+            "AnotherWooVariation\\Core\\": "core/"
+        }
+    },
+    "require": {
+        "php": ">=7.4"
+    }
+}

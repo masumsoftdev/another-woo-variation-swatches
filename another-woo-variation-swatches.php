@@ -25,8 +25,18 @@ class Asfw_Init {
         define('AVSFW_URL', plugin_dir_url(__FILE__));
         define('AVSFW_VERSION', '1.0.0');
 
+
+        if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
+            require_once __DIR__ . '/vendor/autoload.php';
+        }
+
         //Actions
-        add_action('plugins_loaded', [$this, 'avsfw_load_text_domain']);
+        add_action('plugins_loaded', [$this, 'avsfw_load_text_domain'], 5);
+        add_action('init', array($this, 'init'));
+    }
+
+    public function init(){
+       new AnotherWooVariation\Core\Controllers\Loader;  
     }
 
     public function avsfw_load_text_domain(){
@@ -36,6 +46,7 @@ class Asfw_Init {
         if ( !class_exists( 'WooCommerce' ) ) {
             add_action( 'admin_notices', array( $this, 'avsfw_admin_notice' ) );
         }
+
     }
 
     public function avsfw_admin_notice(){
@@ -43,7 +54,7 @@ class Asfw_Init {
         <div class="notice notice-error">
             <p>
                 <?php printf(
-                    e_( '%s requires %s to be installed and active. You can install and activate it from %s', 'another-woo-variation-swatches' ),
+                    __( '%s requires %s to be installed and active. You can install and activate it from %s', 'another-woo-variation-swatches' ),
                     '<strong>Another Variation Swatches for WooCommerce</strong>',
                     '<strong>WooCommerce</strong>',
                     '<a href="' . esc_url( admin_url( 'plugin-install.php?tab=search&s=woocommerce' ) ) . '">here</a>.'
@@ -55,3 +66,5 @@ class Asfw_Init {
 
 
 }
+
+new Asfw_Init();
