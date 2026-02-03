@@ -2,6 +2,7 @@
 namespace AnotherWooVariation\Core\Controllers;
 
 use AnotherWooVariation\Core\Controllers\AdminMenu;
+use AnotherWooVariation\Core\Controllers\Enqueue;
 // Exit if accessed directly
 if (!defined('ABSPATH')) { exit; }
 

@@ -101,15 +101,13 @@ class AdminMenu {
 
 
     public function avsfw_manager_page() { 
-  
         echo '<div class="wrap">
                 <div id="avsfw-admin-app"></div>
             </div>';
-    
     }
     
 
-    public function woonxt_manager_access(){
+    public function avsfw_manager_access(){
         if (!current_user_can('manage_options')) {
             wp_die(__('You do not have sufficient permissions to access this page.'));
         }
