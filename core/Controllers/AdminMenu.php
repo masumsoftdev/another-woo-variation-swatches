@@ -101,9 +101,7 @@ class AdminMenu {
 
 
     public function avsfw_manager_page() { 
-        echo '<div class="wrap">
-                <div id="avsfw-admin-app"></div>
-            </div>';
+        // include __DIR__  . 'views/admin-page.php';
     }
     
 
