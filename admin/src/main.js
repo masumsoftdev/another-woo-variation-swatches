@@ -7,4 +7,6 @@ const avsfw = createApp(App);
 avsfw.use(router);
 
 
+alert()
+
 avsfw.mount('#avsfw-admin-app');
