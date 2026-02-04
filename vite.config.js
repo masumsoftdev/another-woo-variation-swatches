@@ -18,7 +18,7 @@ export default defineConfig({
     outDir: 'build/admin',
     emptyOutDir: true,
     rollupOptions: {
-      input: 'resources/admin/src/main.js',
+      input: 'admin/src/main.js',
       output: {
         entryFileNames: 'index.js',
         assetFileNames: 'style.css',
