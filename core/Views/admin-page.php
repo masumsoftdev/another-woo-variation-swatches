@@ -9,13 +9,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <!-- Tabs -->
     <div class="avsfw-tabs">
-        <button class="avsfw-tab-button active" data-tab="general">General</button>
-        <button class="avsfw-tab-button" data-tab="display">Display</button>
+        <button class="avsfw-tab-button avsfw-active" data-tab="general">General</button>
         <button class="avsfw-tab-button" data-tab="advanced">Advanced</button>
+        <button class="avsfw-tab-button" data-tab="styling">Styling</button>
+        <button class="avsfw-tab-button" data-tab="product-page">Product Page</button>
+        <button class="avsfw-tab-button" data-tab="archive-page">Archive/Shop Page</button>
     </div>
 
     <!-- Tab Contents -->
-    <div class="avsfw-tab-content active" id="avsfw-tab-general">
+    <div class="avsfw-tab-content avsfw-active" id="avsfw-tab-general">
         <h2>General Settings</h2>
         <p>This is the General tab content.</p>
     </div>

@@ -7,12 +7,12 @@ document.addEventListener('DOMContentLoaded', function () {
             const tab = this.getAttribute('data-tab');
 
             // Remove active class
-            tabButtons.forEach(btn => btn.classList.remove('active'));
-            tabContents.forEach(content => content.classList.remove('active'));
+            tabButtons.forEach(btn => btn.classList.remove('avsfw-active'));
+            tabContents.forEach(content => content.classList.remove('avsfw-active'));
 
             // Activate selected
-            this.classList.add('active');
-            document.getElementById('avsfw-tab-' + tab).classList.add('active');
+            this.classList.add('avsfw-active');
+            document.getElementById('avsfw-tab-' + tab).classList.add('avsfw-active');
         });
     });
 });
