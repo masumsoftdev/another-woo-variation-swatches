@@ -137,7 +137,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <p>This is the Advanced tab content.</p>
     </div>
     <div class="avsfw-submit">
-        <a href="#">Save Changes</a>
+        <a href="#" id="avsfw-submit-btn">Save Changes</a>
         <a href="#" class="avsfw-reset">Reset All</a>
     </div>
 </div>
