@@ -10,12 +10,13 @@
     background: #fff;
     padding: 20px;
     border-radius: 6px;
+    margin: 10px 20px 0 2px;
     height: 90vh;
     position: relative;
 }
 
 .avsfw-title {
-    margin-bottom: 20px;
+    padding: 20px 0px;
     color: var(--black); 
 }
 
@@ -82,3 +83,46 @@
 }
 .avsfw-submit a:focus{outline: none;}
 a.avsfw-reset{background: var(--red);}
+
+
+
+
+
+
+
+
+
+
+.avsfw-settings-group {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+}
+
+.avsfw-setting-row {
+  padding: 16px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.avsfw-setting-row:last-child {
+  border-bottom: none;
+}
+
+.avsfw-radio-group label,
+.avsfw-checkbox {
+  display: block;
+  margin-top: 6px;
+}
+
+.avsfw-disabled {
+  opacity: 0.6;
+  position: relative;
+}
+
+.avsfw-pro-badge {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  color: #dc2626;
+  font-weight: 600;
+}

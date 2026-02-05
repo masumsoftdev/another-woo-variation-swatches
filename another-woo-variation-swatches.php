@@ -19,16 +19,21 @@
 
 defined( 'ABSPATH' ) || exit;
 
+use AnotherWooVariation\Core\Hooks\ActivationHook;
 class Asfw_Init {
     public function __construct() {
+
+        if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
+            require_once __DIR__ . '/vendor/autoload.php';
+        }
+
+        register_activation_hook( __FILE__, [ ActivationHook::class, 'activate' ]);
+
         define('AVSFW_PATH', plugin_dir_url(__FILE__));
         define('AVSFW_URL', plugin_dir_url(__FILE__));
         define('AVSFW_VERSION', '1.0.0');
 
 
-        if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
-            require_once __DIR__ . '/vendor/autoload.php';
-        }
 
         //Actions
         add_action('plugins_loaded', [$this, 'avsfw_load_text_domain'], 5);
@@ -51,7 +56,7 @@ class Asfw_Init {
     }
 
     public function init(){
-       new AnotherWooVariation\Core\Controllers\Loader;  
+       new AnotherWooVariation\Core\Controllers\Loader;
     }
 
     public function avsfw_load_text_domain(){
