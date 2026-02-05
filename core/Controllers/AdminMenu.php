@@ -101,7 +101,7 @@ class AdminMenu {
 
 
     public function avsfw_manager_page() { 
-        // include __DIR__  . 'views/admin-page.php';
+        include __DIR__ . '/../Views/admin-page.php';
     }
     
 

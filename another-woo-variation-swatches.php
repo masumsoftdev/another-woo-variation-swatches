@@ -33,6 +33,21 @@ class Asfw_Init {
         //Actions
         add_action('plugins_loaded', [$this, 'avsfw_load_text_domain'], 5);
         add_action('init', array($this, 'init'));
+        add_action('admin_init', array($this, 'avsfw_admin_notices'));
+    }
+    public function avsfw_admin_notices(){
+        if (
+            isset( $_GET['page'] ) &&
+            $_GET['page'] === 'avsfw-manager'
+        ) {
+            remove_all_actions( 'admin_notices' );
+            remove_all_actions( 'all_admin_notices' );
+
+            // Show ONLY our notice if WooCommerce is missing
+            if ( ! class_exists( 'WooCommerce' ) ) {
+                add_action( 'admin_notices', [ $this, 'avsfw_admin_notice' ] );
+            }
+        }
     }
 
     public function init(){
@@ -41,12 +56,6 @@ class Asfw_Init {
 
     public function avsfw_load_text_domain(){
         load_textdomain( 'another-woo-variation-swatches', false, AVSFW_PATH . '/languages' );
-
-        //Check wooCommerce Dependency
-        if ( !class_exists( 'WooCommerce' ) ) {
-            add_action( 'admin_notices', array( $this, 'avsfw_admin_notice' ) );
-        }
-
     }
 
     public function avsfw_admin_notice(){
