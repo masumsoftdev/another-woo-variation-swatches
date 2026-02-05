@@ -1,3 +1,30 @@
+function avsfwToast(message, type = 'success') {
+
+  const container = document.getElementById('avsfw-toast-container');
+  if (!container) return;
+
+  const toast = document.createElement('div');
+  toast.className = `avsfw-toast ${type}`;
+  toast.textContent = message;
+
+  container.appendChild(toast);
+
+  // trigger animation
+  requestAnimationFrame(() => {
+    toast.classList.add('show');
+  });
+
+  // hide after 3s
+  setTimeout(() => {
+    toast.classList.remove('show');
+    toast.classList.add('hide');
+  }, 3000);
+
+  // remove from DOM
+  setTimeout(() => {
+    toast.remove();
+  }, 3500);
+}
 /**
  * Header Tabs
  */
@@ -71,6 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(res => res.json())
       .then(res => {
         if (res.success) {
+          avsfwToast('Settings saved successfully');
           console.log('Settings saved successfully');
         } else {
           console.log(res.data?.message || 'Save failed');

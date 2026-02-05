@@ -1,4 +1,7 @@
 <?php
+
+use AnotherWooVariation\Core\Controllers\Helpers;
+
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
@@ -140,4 +143,5 @@ if ( ! defined( 'ABSPATH' ) ) {
         <a href="#" id="avsfw-submit-btn">Save Changes</a>
         <a href="#" class="avsfw-reset">Reset All</a>
     </div>
+    <div id="avsfw-toast-container"></div>
 </div>

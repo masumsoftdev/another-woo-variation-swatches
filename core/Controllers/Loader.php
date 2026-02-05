@@ -8,6 +8,6 @@ class Loader{
     public function __construct(){
         new AdminMenu();
         new Enqueue();
-
+        new Helpers();
     }
 }

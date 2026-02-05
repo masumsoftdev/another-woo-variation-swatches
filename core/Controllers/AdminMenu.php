@@ -8,7 +8,7 @@ class AdminMenu {
 
     // Constructor
     public function __construct() { 
-        add_action('admin_menu', array($this, 'admin_menu'));
+        add_action('admin_menu', [$this, 'admin_menu']);
     }
 
     public function admin_menu() {
