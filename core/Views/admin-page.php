@@ -26,17 +26,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 
             <!-- Enable Stylesheet -->
             <div class="avsfw-setting-row">
-                <strong>Enable Stylesheet</strong>
+                <div class="avsfw-setting-text">
+                    <strong>Enable Stylesheet</strong>
+                    <p class="avsfw-setting-desc">
+                        Enable or disable the default stylesheet for variation swatches.
+                    </p>
+                </div>
+
                 <label class="avsfw-toggle">
                     <input type="checkbox" name="avsfw_settings[enable_stylesheet]" checked>
                     <span class="avsfw-toggle-slider"></span>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, porro?</p>
                 </label>
             </div>
 
             <!-- Enable Tooltip -->
             <div class="avsfw-setting-row">
-                <strong>Enable Tooltip</strong>
+                <div class="avsfw-setting-text">
+                    <strong>Enable Tooltip</strong>
+                    <p class="avsfw-setting-desc">
+                        Show tooltip on each product attribute swatch.
+                    </p>
+                </div>
+
                 <label class="avsfw-toggle">
                     <input type="checkbox" name="avsfw_settings[enable_tooltip]" checked>
                     <span class="avsfw-toggle-slider"></span>
@@ -45,7 +56,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
             <!-- Dropdown to Button -->
             <div class="avsfw-setting-row">
-                <strong>Dropdowns to Button</strong>
+                <div class="avsfw-setting-text">
+                    <strong>Dropdowns to Button</strong>
+                    <p class="avsfw-setting-desc">
+                        Convert default WooCommerce dropdowns into button-style swatches.
+                    </p>
+                </div>
+
                 <label class="avsfw-toggle">
                     <input type="checkbox" name="avsfw_settings[dropdown_to_button]" checked>
                     <span class="avsfw-toggle-slider"></span>
@@ -54,7 +71,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
             <!-- PRO Feature -->
             <div class="avsfw-setting-row avsfw-disabled">
-                <strong>Dropdowns to Image</strong>
+                <div class="avsfw-setting-text">
+                    <strong>Dropdowns to Image</strong>
+                    <p class="avsfw-setting-desc">
+                        Automatically convert variations to image swatches (Pro feature).
+                    </p>
+                </div>
+
                 <div>
                     <label class="avsfw-toggle">
                         <input type="checkbox" disabled>
@@ -63,7 +86,6 @@ if ( ! defined( 'ABSPATH' ) ) {
                     <span class="avsfw-pro-badge">PRO</span>
                 </div>
             </div>
-
         </div>
     </div>
 

@@ -117,6 +117,17 @@ a.avsfw-reset{background: var(--red);}
     height: 0;
 }
 
+.avsfw-setting-text {
+    max-width: 80%;
+}
+
+.avsfw-setting-desc {
+    margin: 4px 0 0;
+    font-size: 13px;
+    color: #646970;
+}
+
+
 /* Track */
 .avsfw-toggle-slider {
     position: absolute;
