@@ -175,6 +175,13 @@ a.avsfw-reset{background: var(--red);}
     border-radius: 4px;
 }
 
+.avsfw-pro-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
 #avsfw-toast-container {
   position: fixed;
   top: 50px;

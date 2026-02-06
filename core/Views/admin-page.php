@@ -23,69 +23,73 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="avsfw-tab-content avsfw-active" id="avsfw-tab-general">
         <h2>General Settings</h2>
         <div class="avsfw-settings-group">
+           <div class="avsfw-left">
+                 <!-- Enable Stylesheet -->
+                <div class="avsfw-setting-row">
+                    <div class="avsfw-setting-text">
+                        <strong>Enable Stylesheet</strong>
+                        <p class="avsfw-setting-desc">
+                            Enable or disable the default stylesheet for variation swatches.
+                        </p>
+                    </div>
 
-            <!-- Enable Stylesheet -->
-            <div class="avsfw-setting-row">
-                <div class="avsfw-setting-text">
-                    <strong>Enable Stylesheet</strong>
-                    <p class="avsfw-setting-desc">
-                        Enable or disable the default stylesheet for variation swatches.
-                    </p>
-                </div>
-
-                <label class="avsfw-toggle">
-                    <input type="checkbox" name="avsfw_settings[enable_stylesheet]" checked>
-                    <span class="avsfw-toggle-slider"></span>
-                </label>
-            </div>
-
-            <!-- Enable Tooltip -->
-            <div class="avsfw-setting-row">
-                <div class="avsfw-setting-text">
-                    <strong>Enable Tooltip</strong>
-                    <p class="avsfw-setting-desc">
-                        Show tooltip on each product attribute swatch.
-                    </p>
-                </div>
-
-                <label class="avsfw-toggle">
-                    <input type="checkbox" name="avsfw_settings[enable_tooltip]" checked>
-                    <span class="avsfw-toggle-slider"></span>
-                </label>
-            </div>
-
-            <!-- Dropdown to Button -->
-            <div class="avsfw-setting-row">
-                <div class="avsfw-setting-text">
-                    <strong>Dropdowns to Button</strong>
-                    <p class="avsfw-setting-desc">
-                        Convert default WooCommerce dropdowns into button-style swatches.
-                    </p>
-                </div>
-
-                <label class="avsfw-toggle">
-                    <input type="checkbox" name="avsfw_settings[dropdown_to_button]" checked>
-                    <span class="avsfw-toggle-slider"></span>
-                </label>
-            </div>
-
-            <!-- PRO Feature -->
-            <div class="avsfw-setting-row avsfw-disabled">
-                <div class="avsfw-setting-text">
-                    <strong>Dropdowns to Image</strong>
-                    <p class="avsfw-setting-desc">
-                        Automatically convert variations to image swatches (Pro feature).
-                    </p>
-                </div>
-
-                <div>
                     <label class="avsfw-toggle">
-                        <input type="checkbox" disabled>
+                        <input type="checkbox" name="avsfw_settings[enable_stylesheet]" checked>
                         <span class="avsfw-toggle-slider"></span>
                     </label>
-                    <span class="avsfw-pro-badge">PRO</span>
                 </div>
-            </div>
+
+                <!-- Enable Tooltip -->
+                <div class="avsfw-setting-row">
+                    <div class="avsfw-setting-text">
+                        <strong>Enable Tooltip</strong>
+                        <p class="avsfw-setting-desc">
+                            Show tooltip on each product attribute swatch.
+                        </p>
+                    </div>
+
+                    <label class="avsfw-toggle">
+                        <input type="checkbox" name="avsfw_settings[enable_tooltip]" checked>
+                        <span class="avsfw-toggle-slider"></span>
+                    </label>
+                </div>
+
+                <!-- Dropdown to Button -->
+                <div class="avsfw-setting-row">
+                    <div class="avsfw-setting-text">
+                        <strong>Dropdowns to Button</strong>
+                        <p class="avsfw-setting-desc">
+                            Convert default WooCommerce dropdowns into button-style swatches.
+                        </p>
+                    </div>
+
+                    <label class="avsfw-toggle">
+                        <input type="checkbox" name="avsfw_settings[dropdown_to_button]" checked>
+                        <span class="avsfw-toggle-slider"></span>
+                    </label>
+                </div>
+
+                <!-- PRO Feature -->
+                <div class="avsfw-setting-row avsfw-disabled">
+                    <div class="avsfw-setting-text">
+                        <strong>Dropdowns to Image</strong>
+                        <p class="avsfw-setting-desc">
+                            Automatically convert variations to image swatches (Pro feature).
+                        </p>
+                    </div>
+
+                    <div class="avsfw-pro-action">
+                        <span class="avsfw-pro-badge">PRO</span>
+                        <label class="avsfw-toggle">
+                            <input type="checkbox" disabled>
+                            <span class="avsfw-toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+           </div>
+           <div class="avsfw-right">
+                <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, autem, dicta quos harum porro veniam culpa recusandae aliquid nobis hic pariatur cumque! Quidem amet, consequatur animi, labore aliquam repudiandae quisquam aspernatur soluta iusto nesciunt veritatis? Rerum sed deleniti vel, incidunt, voluptas quod id tempora reiciendis aperiam minus in soluta perferendis?</h1>
+           </div>
         </div>
     </div>
 
