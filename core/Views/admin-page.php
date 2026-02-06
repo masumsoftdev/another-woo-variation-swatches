@@ -23,111 +23,48 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="avsfw-tab-content avsfw-active" id="avsfw-tab-general">
         <h2>General Settings</h2>
         <div class="avsfw-settings-group">
-        <!-- Enable Stylesheet -->
-        <div class="avsfw-setting-row">
-            <label for="avsfw_enable_stylesheet">
+
+            <!-- Enable Stylesheet -->
+            <div class="avsfw-setting-row">
                 <strong>Enable Stylesheet</strong>
-            </label>
-
-            <label class="avsfw-checkbox">
-                <input
-                    type="checkbox"
-                    id="avsfw_enable_stylesheet"
-                    name="avsfw_settings[enable_stylesheet]"
-                    value="1"
-                    <?php checked( $options['enable_stylesheet'] ?? 1 ); ?>
-                />
-                Enable default stylesheet.
-            </label>
-        </div>
-
-        <!-- Enable Tooltip -->
-        <div class="avsfw-setting-row">
-            <label for="avsfw_enable_tooltip">
-                <strong>Enable Tooltip</strong>
-            </label>
-
-            <label class="avsfw-checkbox">
-                <input
-                    type="checkbox"
-                    id="avsfw_enable_tooltip"
-                    name="avsfw_settings[enable_tooltip]"
-                    value="1"
-                    <?php checked( $options['enable_tooltip'] ?? 1 ); ?>
-                />
-                Enable tooltip on each product attribute.
-            </label>
-        </div>
-
-        <!-- Shape Style -->
-        <div class="avsfw-setting-row">
-            <label>
-                <strong>Shape Style</strong>
-            </label>
-
-            <div class="avsfw-radio-group">
-                <label>
-                    <input
-                        type="radio"
-                        name="avsfw_settings[shape_style]"
-                        value="rounded"
-                        <?php checked( $options['shape_style'] ?? 'squared', 'rounded' ); ?>
-                    />
-                    Rounded Shape
-                </label>
-
-                <label>
-                    <input
-                        type="radio"
-                        name="avsfw_settings[shape_style]"
-                        value="squared"
-                        <?php checked( $options['shape_style'] ?? 'squared', 'squared' ); ?>
-                    />
-                    Squared Shape
+                <label class="avsfw-toggle">
+                    <input type="checkbox" name="avsfw_settings[enable_stylesheet]" checked>
+                    <span class="avsfw-toggle-slider"></span>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, porro?</p>
                 </label>
             </div>
-        </div>
 
-        <!-- Dropdowns to Button -->
-        <div class="avsfw-setting-row">
-            <label for="avsfw_dropdown_to_button">
+            <!-- Enable Tooltip -->
+            <div class="avsfw-setting-row">
+                <strong>Enable Tooltip</strong>
+                <label class="avsfw-toggle">
+                    <input type="checkbox" name="avsfw_settings[enable_tooltip]" checked>
+                    <span class="avsfw-toggle-slider"></span>
+                </label>
+            </div>
+
+            <!-- Dropdown to Button -->
+            <div class="avsfw-setting-row">
                 <strong>Dropdowns to Button</strong>
-            </label>
+                <label class="avsfw-toggle">
+                    <input type="checkbox" name="avsfw_settings[dropdown_to_button]" checked>
+                    <span class="avsfw-toggle-slider"></span>
+                </label>
+            </div>
 
-            <label class="avsfw-checkbox">
-                <input
-                    type="checkbox"
-                    id="avsfw_dropdown_to_button"
-                    name="avsfw_settings[dropdown_to_button]"
-                    value="1"
-                    <?php checked( $options['dropdown_to_button'] ?? 1 ); ?>
-                />
-                Convert default dropdowns to button.
-            </label>
-        </div>
-
-        <!-- Dropdowns to Image (Pro / Disabled) -->
-        <div class="avsfw-setting-row avsfw-disabled">
-            <label for="avsfw_dropdown_to_image">
+            <!-- PRO Feature -->
+            <div class="avsfw-setting-row avsfw-disabled">
                 <strong>Dropdowns to Image</strong>
-            </label>
+                <div>
+                    <label class="avsfw-toggle">
+                        <input type="checkbox" disabled>
+                        <span class="avsfw-toggle-slider"></span>
+                    </label>
+                    <span class="avsfw-pro-badge">PRO</span>
+                </div>
+            </div>
 
-            <label class="avsfw-checkbox">
-                <input
-                    type="checkbox"
-                    id="avsfw_dropdown_to_image"
-                    name="avsfw_settings[dropdown_to_image]"
-                    value="1"
-                    disabled
-                />
-                Convert default dropdowns to image type if variation has an image.
-            </label>
-
-            <span class="avsfw-pro-badge">PRO</span>
         </div>
-
-    </div>
-
     </div>
 
     <div class="avsfw-tab-content" id="avsfw-tab-display">
