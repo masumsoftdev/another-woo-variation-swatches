@@ -9,5 +9,6 @@ class Loader{
         new AdminMenu();
         new Enqueue();
         new Helpers();
+        new VariationAdmin();
     }
 }

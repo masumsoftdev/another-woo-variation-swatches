@@ -19,7 +19,7 @@ class AdminMenu {
             esc_html__('Woo Variations', 'another-woo-variation-swatches'),
             'manage_options', 
             'avsfw-manager',
-            array($this, 'avsfw_manager_page'),
+            [$this, 'avsfw_manager_page'],
             $admin_menu_icon,
             52
         );
@@ -30,7 +30,7 @@ class AdminMenu {
             esc_html__("Inventory", "another-woo-variation-swatches"),
             'manage_options',
             'avsfw-manager#',
-            array($this, "avsfw_manager_page")
+            [$this, "avsfw_manager_page"]
         );
 
         // Create a array for sub menu 
@@ -81,7 +81,7 @@ class AdminMenu {
                 $menu['Title'],
                 $menu['capability'],
                 'avsfw-manager#/' . $menu_id,
-                array($this, 'avsfw_manager_page')
+                [$this, 'avsfw_manager_page']
             );
         }
 
@@ -95,7 +95,7 @@ class AdminMenu {
             esc_html__("License", "another-woo-variation-swatches"),
             'manage_options',
             'woonxt-pro-manager-license',
-            array($this, "avsfw_manager_page")
+            [$this, "avsfw_manager_page"]
         );
     }
 

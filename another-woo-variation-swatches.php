@@ -37,8 +37,8 @@ class Asfw_Init {
 
         //Actions
         add_action('plugins_loaded', [$this, 'avsfw_load_text_domain'], 5);
-        add_action('init', array($this, 'init'));
-        add_action('admin_init', array($this, 'avsfw_admin_notices'));
+        add_action('init', [$this, 'init']);
+        add_action('admin_init', [$this, 'avsfw_admin_notices']);
     }
     public function avsfw_admin_notices(){
         if (
