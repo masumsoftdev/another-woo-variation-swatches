@@ -135,6 +135,7 @@ a.avsfw-reset{background: var(--red);}
     background-color: #dcdcde;
     border-radius: 4px; /* square */
     transition: 0.25s;
+    cursor: pointer;
 }
 
 /* Knob */
