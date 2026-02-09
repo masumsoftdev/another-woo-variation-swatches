@@ -1,6 +1,7 @@
 :root{
     --orange      : #ff6a34;
     --light-orange: #ffe6d7;
+    --dark-orange : #e75622;
     --white       : #ffffff;
     --black       : #000000;
     --red         : #B90000;
@@ -82,9 +83,9 @@
     color: var(--white);
     transition: all 0.2s ease;
 }
-.avsfw-submit a:focus{outline: none;}
+.avsfw-submit a:focus{outline: none; box-shadow: none;}
+.avsfw-submit a:hover{background: var(--dark-orange)};
 a.avsfw-reset{background: var(--red);}
-
 
 .avsfw-settings-group {
     background: #fff;
@@ -92,7 +93,6 @@ a.avsfw-reset{background: var(--red);}
     padding: 20px;
     border-radius: 5px;
 }
-
 .avsfw-setting-row {
     display: flex;
     justify-content: space-between;

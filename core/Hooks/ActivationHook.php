@@ -6,6 +6,7 @@ if ( ! defined('ABSPATH') ) exit;
 class ActivationHook {
 
     public static function activate() {
+        
         global $wpdb;
 
         require_once ABSPATH . 'wp-admin/includes/upgrade.php';

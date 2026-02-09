@@ -89,12 +89,10 @@ if ( ! defined( 'ABSPATH' ) ) {
                     </div>
                 </div>
             </div>
-
             <div class="avsfw-tab-content" id="avsfw-tab-display">
                 <h2>Display Settings</h2>
                 <p>This is the Display tab content.</p>
             </div>
-
             <div class="avsfw-tab-content" id="avsfw-tab-advanced">
                 <h2>Advanced Settings</h2>
                 <p>This is the Advanced tab content.</p>

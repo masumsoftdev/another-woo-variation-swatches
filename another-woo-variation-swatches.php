@@ -33,8 +33,6 @@ class Asfw_Init {
         define('AVSFW_URL', plugin_dir_url(__FILE__));
         define('AVSFW_VERSION', '1.0.0');
 
-
-
         //Actions
         add_action('plugins_loaded', [$this, 'avsfw_load_text_domain'], 5);
         add_action('init', [$this, 'init']);
@@ -77,8 +75,6 @@ class Asfw_Init {
         </div>
         <?php
     }
-
-
 }
 
 new Asfw_Init();
