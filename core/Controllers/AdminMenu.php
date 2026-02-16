@@ -24,79 +24,8 @@ class AdminMenu {
             52
         );
 
-        add_submenu_page(
-            'avsfw-manager',
-            esc_html__("Inventory", "another-woo-variation-swatches"),
-            esc_html__("Inventory", "another-woo-variation-swatches"),
-            'manage_options',
-            'avsfw-manager#',
-            [$this, "avsfw_manager_page"]
-        );
-
-        // Create a array for sub menu 
-        $sub_menu = array(  
-            array(
-                'id'         => 'purchase',
-                'Title'      => esc_html__('Purchase', 'another-woo-variation-swatches'),
-                'capability' => 'manage_options',                           // Example capability
-            ), 
-            array(
-                'id'         => 'orders',
-                'Title'      => esc_html__('Orders', 'another-woo-variation-swatches'),
-                'capability' => 'manage_options',                         // Example capability
-            ),  
-            array(
-                'id'         => 'sales',
-                'Title'      => esc_html__('Sales', 'another-woo-variation-swatches'),
-                'capability' => 'manage_options',                        // Example capability
-            ),
-            array(
-                'id'         => 'expense',
-                'Title'      => esc_html__('Expense', 'another-woo-variation-swatches'),
-                'capability' => 'manage_options',                          // Example capability
-            ),
-            array(
-                'id'         => 'reports',
-                'Title'      => esc_html__('Reports', 'another-woo-variation-swatches'),
-                'capability' => 'manage_options',                          // Example capability
-            ),
-            array(
-                'id'         => 'customers',
-                'Title'      => esc_html__('Customers', 'another-woo-variation-swatches'),
-                'capability' => 'manage_options',                            // Example capability
-            ),
-            array(
-                'id'         => 'settings',
-                'Title'      => esc_html__('Settings', 'another-woo-variation-swatches'),
-                'capability' => 'manage_options',                           // Example capability
-            )
-        );
-         
-        // Loop through array and create sub menu
-        foreach ($sub_menu as $menu) {
-            $menu_id = $menu['id'];
-            add_submenu_page(
-                'avsfw-manager',
-                $menu['Title'],
-                $menu['Title'],
-                $menu['capability'],
-                'avsfw-manager#/' . $menu_id,
-                [$this, 'avsfw_manager_page']
-            );
-        }
-
         // Remove Submenu Page
         remove_submenu_page('avsfw-manager', 'avsfw-manager');
-
-        // License Settings 
-        add_submenu_page(
-            'avsfw-manager',
-            esc_html__("License", "another-woo-variation-swatches"),
-            esc_html__("License", "another-woo-variation-swatches"),
-            'manage_options',
-            'woonxt-pro-manager-license',
-            [$this, "avsfw_manager_page"]
-        );
     }
 
 
