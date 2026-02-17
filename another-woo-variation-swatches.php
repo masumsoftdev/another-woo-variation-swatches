@@ -28,7 +28,7 @@ class Asfw_Init {
         }
 
         register_activation_hook( __FILE__, [ ActivationHook::class, 'activate' ]);
-
+        //Constants
         define('AVSFW_PATH', plugin_dir_url(__FILE__));
         define('AVSFW_URL', plugin_dir_url(__FILE__));
         define('AVSFW_VERSION', '1.0.0');
