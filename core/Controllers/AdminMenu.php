@@ -28,12 +28,10 @@ class AdminMenu {
         remove_submenu_page('avsfw-manager', 'avsfw-manager');
     }
 
-
     public function avsfw_manager_page() { 
         include __DIR__ . '/../Views/admin-page.php';
     }
     
-
     public function avsfw_manager_access(){
         if (!current_user_can('manage_options')) {
             wp_die(__('You do not have sufficient permissions to access this page.'));
