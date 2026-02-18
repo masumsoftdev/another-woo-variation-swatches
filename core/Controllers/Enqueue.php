@@ -14,7 +14,9 @@ class Enqueue{
         if ( $hook !== 'toplevel_page_avsfw-manager' ) {
             return;
         }
+        wp_enqueue_style( 'avsfw-toast', AVSFW_URL .'assets/css/helper.css', array(), true, 'all' );
         wp_enqueue_style( 'avsfw-core-css', AVSFW_URL .'assets/css/custom.css', array(), true, 'all' );
+        wp_enqueue_script('avsfw-helper-js', AVSFW_URL .'assets/js/helper.js', array('jquery'), time(), true);
         wp_enqueue_script('avsfw-core-js', AVSFW_URL .'assets/js/app.js', array('jquery'), time(), true);
         wp_localize_script('avsfw-core-js', 'avsfw_core_apps', [
             'avsfwt_url' => AVSFW_URL,
