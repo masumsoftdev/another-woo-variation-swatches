@@ -233,3 +233,63 @@ a.avsfw-reset{background: var(--red);}
 .avsfw-toast.error {
   background: var(--red);
 }
+
+
+.avsfw-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.avsfw-modal {
+  background: var(--white);
+  padding: 24px;
+  border-radius: 8px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  animation: avsfwFadeIn 0.2s ease;
+}
+
+.avsfw-modal-message {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: var(--black);
+}
+
+.avsfw-modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.avsfw-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.avsfw-confirm {
+  background: var(--orange);
+  color: var(--white);
+}
+
+.avsfw-confirm:hover {
+  background: var(--dark-orange);
+}
+
+.avsfw-cancel {
+  background: var(--red);
+  color: var(--white);
+}
+
+@keyframes avsfwFadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}

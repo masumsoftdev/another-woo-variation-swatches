@@ -25,6 +25,49 @@ function avsfwToast(message, type = 'success') {
     toast.remove();
   }, 3500);
 }
+
+function avsfwConfirmModal(message, onConfirm, onCancel) {
+
+  // Create overlay
+  const overlay = document.createElement('div');
+  overlay.className = 'avsfw-modal-overlay';
+
+  // Create modal
+  const modal = document.createElement('div');
+  modal.className = 'avsfw-modal';
+
+  modal.innerHTML = `
+    <div class="avsfw-modal-message">${message}</div>
+    <div class="avsfw-modal-actions">
+      <button class="avsfw-btn avsfw-confirm">Confirm</button>
+      <button class="avsfw-btn avsfw-cancel">Cancel</button>
+    </div>
+  `;
+
+  overlay.appendChild(modal);
+  document.body.appendChild(overlay);
+
+  // Confirm button
+  modal.querySelector('.avsfw-confirm').addEventListener('click', () => {
+    document.body.removeChild(overlay);
+    if (onConfirm) onConfirm();
+  });
+
+  // Cancel button
+  modal.querySelector('.avsfw-cancel').addEventListener('click', () => {
+    document.body.removeChild(overlay);
+    if (onCancel) onCancel();
+  });
+
+  // Close when clicking outside
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) {
+      document.body.removeChild(overlay);
+      if (onCancel) onCancel();
+    }
+  });
+}
+
 /**
  * Header Tabs
  */
@@ -116,5 +159,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+/**
+ * Reset Button Confirmation
+ */
 
+document.addEventListener('DOMContentLoaded', () => {
+  let resetBtn = document.querySelector('.avsfw-reset');
 
+  resetBtn.addEventListener('click', function (e){
+    e.preventDefault();
+    avsfwConfirmModal(
+      'Are you sure you want to reset?',
+      function () {
+        avsfwToast('Reset successfully');
+      },
+      function () {
+        avsfwToast('Thank you');
+      }
+    );
+  });
+});
