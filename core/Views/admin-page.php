@@ -89,11 +89,74 @@ if ( ! defined( 'ABSPATH' ) ) {
                     </div>
                 </div>
             </div>
-            <div class="avsfw-tab-content" id="avsfw-tab-display">
-                <h2>Display Settings</h2>
-                <p>This is the Display tab content.</p>
-            </div>
             <div class="avsfw-tab-content" id="avsfw-tab-advanced">
+                <h2>Advanced Options</h2>
+                <div class="avsfw-settings-group">
+                    <!-- Clear on Reselect -->
+                    <div class="avsfw-setting-row">
+                        <div class="avsfw-setting-text">
+                            <strong>Clear on Reselect</strong>
+                            <p class="avsfw-setting-desc">
+                                Clear selected attribute on select again.
+                            </p>
+                        </div>
+
+                        <label class="avsfw-toggle">
+                            <input type="checkbox" name="avsfw_settings[enable_clear_on_reselect]" checked>
+                            <span class="avsfw-toggle-slider"></span>
+                        </label>
+                    </div>
+
+                    <!-- Disable Out of Stock -->
+                    <div class="avsfw-setting-row">
+                        <div class="avsfw-setting-text">
+                            <strong>Disable Out of Stock</strong>
+                            <p class="avsfw-setting-desc">
+                                Disable Out Of Stock Product/Item.
+                            </p>
+                        </div>
+
+                        <label class="avsfw-toggle">
+                            <input type="checkbox" name="avsfw_settings[enable_tooltip]" checked>
+                            <span class="avsfw-toggle-slider"></span>
+                        </label>
+                    </div>
+
+                    <!-- Clickable Out Of Stock -->
+                    <div class="avsfw-setting-row">
+                        <div class="avsfw-setting-text">
+                            <strong>Clickable Out Of Stock</strong>
+                            <p class="avsfw-setting-desc">
+                                Clickable Out Of Stock Product/Item.
+                            </p>
+                        </div>
+
+                        <label class="avsfw-toggle">
+                            <input type="checkbox" name="avsfw_settings[clickable_out_of_stock]" checked>
+                            <span class="avsfw-toggle-slider"></span>
+                        </label>
+                    </div>
+
+                    <!-- PRO Feature -->
+                    <div class="avsfw-setting-row avsfw-disabled">
+                        <div class="avsfw-setting-text">
+                            <strong>Dropdowns to Image</strong>
+                            <p class="avsfw-setting-desc">
+                                Automatically convert variations to image swatches (Pro feature).
+                            </p>
+                        </div>
+
+                        <div class="avsfw-pro-action">
+                            <span class="avsfw-pro-badge">PRO</span>
+                            <label class="avsfw-toggle">
+                                <input type="checkbox" disabled>
+                                <span class="avsfw-toggle-slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="avsfw-tab-content" id="avsfw-tab-styling">
                 <h2>Advanced Settings</h2>
                 <p>This is the Advanced tab content.</p>
             </div>
